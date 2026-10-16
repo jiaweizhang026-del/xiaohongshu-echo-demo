@@ -12,6 +12,11 @@ const stepItems = [...document.querySelectorAll('.demo-steps li')];
 let selectedFeeling = '';
 let matchTimer;
 
+function resetAppViewport() {
+  app.scrollTop = 0;
+  document.querySelector('#noteScroll').scrollTop = 0;
+}
+
 function setStep(index) {
   stepItems.forEach((item, i) => item.classList.toggle('active', i === index));
 }
@@ -50,7 +55,7 @@ startMatch.addEventListener('click', () => {
   matchTimer = window.setTimeout(() => {
     matchView.classList.remove('open');
     echoView.classList.add('open');
-  }, 3200);
+  }, 4400);
 });
 
 document.querySelector('[data-cancel]').addEventListener('click', () => {
@@ -75,10 +80,14 @@ replyInput.addEventListener('input', () => {
 sendReply.addEventListener('click', () => {
   const text = replyInput.value.trim();
   if (!text) return;
+  replyInput.blur();
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  resetAppViewport();
   document.querySelector('#sentText').textContent = text;
   localStorage.setItem('echo-last-reply', text);
   echoView.classList.remove('open');
   completeView.classList.add('open');
+  window.requestAnimationFrame(resetAppViewport);
   setStep(3);
 });
 
@@ -107,6 +116,7 @@ function resetDemo() {
   sendReply.disabled = true;
   document.querySelector('#saveEcho').textContent = '收进我的「回声夹」';
   document.querySelector('#saveEcho').style.background = '';
+  resetAppViewport();
   document.querySelector('#noteScroll').scrollTo({ top: 250, behavior: 'smooth' });
   setStep(0);
 }

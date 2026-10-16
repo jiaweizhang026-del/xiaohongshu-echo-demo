@@ -110,6 +110,12 @@
             <section class="match-view" id="matchView" aria-live="polite">
               <div class="match-top"><span>正在寻找同频的人</span><button data-cancel type="button">取消</button></div>
               <div class="orbit-wrap">
+                <span class="space-spark spark-one">✦</span>
+                <span class="space-spark spark-two">✧</span>
+                <span class="space-dot dot-one"></span>
+                <span class="space-dot dot-two"></span>
+                <div class="signal-orbit orbit-a"></div>
+                <div class="signal-orbit orbit-b"></div>
                 <div class="match-avatars" aria-hidden="true">
                   <span class="match-me">你</span>
                   <i><b></b><b></b><b></b></i>
@@ -153,11 +159,15 @@
             </section>
 
             <section class="complete-view" id="completeView">
-              <div class="complete-art"><div class="ring-a"></div><div class="ring-b"></div><span>✓</span></div>
-              <p class="sheet-kicker">回声已抵达</p>
-              <h3>一句话，让两个陌生的此刻<br/>短暂地看见了彼此。</h3>
-              <div class="connection-line"><div class="avatar avatar-you">你</div><i></i><span>因为同一句话相遇</span><i></i><div class="avatar avatar-night">屿</div></div>
-              <div class="sent-card"><span>你的回声</span><p id="sentText">愿我们都慢一点</p></div>
+              <div class="result-poster">
+                <span class="poster-star star-a">✦</span><span class="poster-star star-b">✧</span>
+                <div class="poster-orbit orbit-left"></div><div class="poster-orbit orbit-right"></div>
+                <div class="complete-art"><div class="ring-a"></div><div class="ring-b"></div><span>✓</span></div>
+                <p class="sheet-kicker">回声已抵达 · ECHO FOUND</p>
+                <h3>一句话，让两个陌生的此刻<br/>短暂地看见了彼此。</h3>
+                <div class="connection-line"><div class="avatar avatar-you">你</div><i></i><span>因为同一句话相遇</span><i></i><div class="avatar avatar-night">屿</div></div>
+                <div class="sent-card"><span>你的回声</span><p id="sentText">愿我们都慢一点</p></div>
+              </div>
               <button class="primary-button" id="saveEcho" type="button">收进我的「回声夹」</button>
               <button class="quiet-button" id="finishDemo" type="button">回到笔记</button>
               <p class="complete-note">不必关注，不必成为好友。<br/>关系也可以只是一份被接住的感受。</p>
