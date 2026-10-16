@@ -50,7 +50,7 @@ startMatch.addEventListener('click', () => {
   matchTimer = window.setTimeout(() => {
     matchView.classList.remove('open');
     echoView.classList.add('open');
-  }, 2600);
+  }, 3200);
 });
 
 document.querySelector('[data-cancel]').addEventListener('click', () => {
