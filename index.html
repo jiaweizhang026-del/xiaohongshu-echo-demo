@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content="回声 - 让读过同一篇笔记的人，因为一句话短暂相遇。小红书体验设计测试题交互原型。" />
+    <title>回声 · 一次轻量的同感相遇</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <aside class="story-panel" aria-label="方案说明">
+        <div class="brand-row">
+          <span class="brand-dot"></span>
+          <span>RED NOTE · CONCEPT</span>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">COMMUNITY INTERACTION</p>
+          <h1>回声<span class="title-mark">。</span></h1>
+          <p class="lead">让读过同一篇笔记、被同一句话击中的陌生人，交换一次轻量而克制的回应。</p>
+          <div class="insight-card">
+            <span>核心洞察</span>
+            <p>“我想知道，此刻是不是也有人和我一样。”</p>
+          </div>
+          <ol class="demo-steps" aria-label="体验步骤">
+            <li class="active"><b>01</b><span>读到共鸣</span></li>
+            <li><b>02</b><span>表达感受</span></li>
+            <li><b>03</b><span>交换回声</span></li>
+            <li><b>04</b><span>关系发生</span></li>
+          </ol>
+        </div>
+        <div class="panel-footer">
+          <span>纯前端原型 · 数据仅保存在本机</span>
+          <button id="resetDemo" class="text-button" type="button">重新体验</button>
+        </div>
+      </aside>
+
+      <section class="device-area" aria-label="可交互原型">
+        <div class="device">
+          <div class="device-bar" aria-hidden="true"></div>
+          <div class="app" id="app">
+            <header class="app-header">
+              <button class="icon-button" aria-label="返回" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div class="author-mini">
+                <div class="avatar avatar-sun">枝</div>
+                <div><strong>枝枝的慢生活</strong><small>上海 · 2小时前</small></div>
+              </div>
+              <button class="follow-button" type="button">关注</button>
+              <button class="icon-button" aria-label="分享" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg>
+              </button>
+            </header>
+
+            <div class="note-scroll" id="noteScroll">
+              <div class="hero-photo" role="img" aria-label="黄昏窗边的一杯咖啡">
+                <div class="sun-disc"></div>
+                <div class="window-line one"></div>
+                <div class="window-line two"></div>
+                <div class="cup"><span></span></div>
+                <span class="photo-caption">18:42 / 把今天还给自己</span>
+              </div>
+              <article class="note-body">
+                <h2>长大以后，我开始允许自己“没那么有用”</h2>
+                <p>以前总觉得每一段时间都要有产出，每一次选择都要有答案。后来才发现，生活并不总需要被证明。</p>
+                <p class="resonance-line" data-quote="允许自己慢一点，也是一种向前。">
+                  <span>允许自己慢一点，也是一种向前。</span>
+                  <button class="echo-hint" type="button" aria-label="查看同感的人">
+                    <span class="tiny-faces"><i>禾</i><i>北</i><i>屿</i></span>
+                    <span><b>12 人</b>也停在这里</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </p>
+                <p>下班后绕远路回家，买一束没有理由的花，把手机调成静音。那些看起来“没有用”的时刻，正在一点点把我还给自己。</p>
+                <div class="tags"><span>#生活感悟</span><span>#允许一切发生</span><span>#独处</span></div>
+                <p class="date">编辑于 10-16</p>
+              </article>
+              <div class="comments-preview">
+                <div class="section-title"><span>共 268 条评论</span><button type="button">查看全部</button></div>
+                <div class="comment"><div class="avatar avatar-moss">禾</div><div><strong>禾木</strong><p>“没有用”的时间，也在组成我。</p><small>今天 19:03 · 杭州</small></div></div>
+              </div>
+            </div>
+
+            <footer class="action-bar">
+              <button class="comment-input" type="button">说点什么…</button>
+              <button class="action" type="button" aria-label="点赞"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5a5.5 5.5 0 0 0 1.1-8.9Z"/></svg><span>1.2k</span></button>
+              <button class="action" type="button" aria-label="收藏"><svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg><span>683</span></button>
+              <button class="action" type="button" aria-label="评论"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg><span>268</span></button>
+            </footer>
+
+            <div class="scrim" id="scrim"></div>
+            <section class="sheet" id="feelingSheet" aria-modal="true" role="dialog" aria-labelledby="feelingTitle">
+              <div class="sheet-handle"></div>
+              <button class="sheet-close" data-close type="button" aria-label="关闭">×</button>
+              <p class="sheet-kicker">你们停在了同一句话</p>
+              <h3 id="feelingTitle">“允许自己慢一点，也是一种向前。”</h3>
+              <p class="sheet-desc">留下一点此刻的感受，我们会为你找一位同频的人。</p>
+              <div class="feeling-options" role="group" aria-label="选择此刻的感受">
+                <button type="button" data-feeling="被理解">被理解</button>
+                <button type="button" data-feeling="松了一口气">松了一口气</button>
+                <button type="button" data-feeling="想起了自己">想起了自己</button>
+                <button type="button" data-feeling="还在努力">还在努力</button>
+              </div>
+              <button class="primary-button" id="startMatch" type="button" disabled>遇见一位同频的人 <span>→</span></button>
+              <div class="privacy-note"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span>匿名 · 不公开展示 · 仅交换一次回应</span></div>
+            </section>
+
+            <section class="match-view" id="matchView" aria-live="polite">
+              <div class="match-top"><span>正在寻找同频的人</span><button data-cancel type="button">取消</button></div>
+              <div class="orbit-wrap">
+                <div class="orbit orbit-one"><i></i><i></i><i></i></div>
+                <div class="orbit orbit-two"><i></i><i></i></div>
+                <div class="pulse-core"><span id="feelingCore">被理解</span><small>你的此刻</small></div>
+              </div>
+              <p class="match-copy">在刚刚读过这句话的人里<br/>寻找一份相近的感受…</p>
+              <div class="match-quote">“允许自己慢一点，也是一种向前。”</div>
+            </section>
+
+            <section class="echo-view" id="echoView">
+              <header class="echo-header">
+                <button class="icon-button" id="backToNote" type="button" aria-label="回到笔记"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                <div><strong>一封回声</strong><small>来自与你同频的人</small></div>
+                <button class="icon-button" id="echoInfo" type="button" aria-label="关于回声"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></button>
+              </header>
+              <div class="echo-content">
+                <div class="match-person">
+                  <div class="avatar avatar-night">屿</div>
+                  <div><strong>今晚也在慢慢生活的人</strong><span><i></i> 同感于 18 秒前</span></div>
+                </div>
+                <div class="shared-feeling"><span>你们都选择了</span><b id="sharedFeeling">「被理解」</b></div>
+                <div class="echo-card">
+                  <div class="quote-mark">“</div>
+                  <p>原来停下来并不是落后，<br/>只是终于听见了自己的声音。</p>
+                  <small>TA 留给这句话的回声</small>
+                  <div class="card-grain"></div>
+                </div>
+                <div class="reply-area">
+                  <p>你想把什么回给 TA？</p>
+                  <div class="quick-replies">
+                    <button type="button">谢谢你，我也是</button>
+                    <button type="button">这句话我会记住</button>
+                    <button type="button">愿我们都慢一点</button>
+                  </div>
+                  <div class="reply-compose"><input id="replyInput" maxlength="36" placeholder="写一句回声（最多 36 字）"/><button id="sendReply" type="button" aria-label="发送回声" disabled><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div>
+                  <small>一次回应后，对话将自然结束。不给陌生关系增加负担。</small>
+                </div>
+              </div>
+            </section>
+
+            <section class="complete-view" id="completeView">
+              <div class="complete-art"><div class="ring-a"></div><div class="ring-b"></div><span>↝</span></div>
+              <p class="sheet-kicker">回声已抵达</p>
+              <h3>一句话，让两个陌生的此刻<br/>短暂地看见了彼此。</h3>
+              <div class="connection-line"><div class="avatar avatar-you">你</div><i></i><span>因为同一句话相遇</span><i></i><div class="avatar avatar-night">屿</div></div>
+              <div class="sent-card"><span>你的回声</span><p id="sentText">愿我们都慢一点</p></div>
+              <button class="primary-button" id="saveEcho" type="button">收进我的「回声夹」</button>
+              <button class="quiet-button" id="finishDemo" type="button">回到笔记</button>
+              <p class="complete-note">不必关注，不必成为好友。<br/>关系也可以只是一份被接住的感受。</p>
+            </section>
+
+            <div class="toast" id="toast" role="status">已收进回声夹</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
